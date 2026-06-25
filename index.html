@@ -1,97 +1,149 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VNL Masculina</title>
+
     <style>
+        body {
+            background-color: #f5f5f5;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
         header {
             background-color: #8D3970;
             color: #FFFFFF;
             text-align: center;
-            max-whidth: 800px;
+            max-width: 600px;
+            margin: 14px auto;
             padding: 14px;
+            border-radius: 6px;
         }
 
         main {
             background-color: #FFFFFF;
             color: #8D3970;
+            max-width: 600px;
+            margin: 14px auto;
             padding: 14px;
+            border-radius: 6px;
         }
-     article{
-        display: flex;
-     }
 
+        article {
+            display: flex;
+            gap: 18px;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #8D3970;
+        }
 
         img {
-            width: 60px heigt: 60px;
+            width: 90px;
+            height: 90px;
+            object-fit: cover;
+            border-radius: 6px;
         }
 
         .artigo-autor {
             font-weight: bold;
         }
+
+        button {
+            background-color: #8D3970;
+            color: #FFFFFF;
+            border: none;
+            padding: 8px 12px;
+            margin-right: 6px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button:hover {
+            opacity: 0.7;
+        }
     </style>
 </head>
 
 <body>
+
     <header>
-        <h1>Tudo sobre a VNL
-            <p>Vou compartilhar conhecimentos
-                sobre a VNL Masculina</p>
-        </h1>
+        <h1>Tudo sobre a VNL Masculina</h1>
+        <p>Vou compartilhar conhecimentos e curiosidades sobre a VNL Masculina.</p>
     </header>
+
     <main>
-       <article>
-      <img src ="imagem.blog.png" alt="Banner da Liga das Nacoes de Volei Masculino (VNL) com Darlan, 
-    atleta da selecao brasileira, em destaque">
-        <div>
-            <h2>Meu primeiro post</h2>
-            <p class="artigo-autor">Por: Emanuelle Vitoria</p>
-            <p> Bem-vindos ao meu site! Aqui vou
-                falar sobre os jogos da Liga das Nacoes de Voleibol Masculino</p>
-            <button>🫶 <span>0</span></button>
-            <button>🗨️ <span>0</span></button>
-            <button>🔁 <span>0</span></button>
-            <button>🔗 <span>0</span></button>
-             </div>
-             </article>
-             
-             <article>
-           <img src = "imagem.blog.jpg" alt = "Mais do que jogadores: uma familia em busca da vitoria">
-           <div>
-        </h2>Meu segundo post</h2>
-            <p class="artigo-autor">Por: Emanuelle Vitoria</p>
-            <p> Bem-vindos ao meu site! Aqui vou
-                falar sobre os jogos da Liga das Nacoes de Voleibol Masculino</p>
-            <button>🫶 <span>0</span></button>
-            <button>🗨️ <span>0</span></button>
-            <button>🔁 <span>0</span></button>
-            <button>🔗 <span>0</span></button>
-         <div>
-         <article> 
-    </body>
-<script>
 
-    const botoes = document.querySelectorAll('button');
+        <article>
+            <img src="imagem.blog.png"
+                alt="Banner da Liga das Nações de Voleibol Masculino (VNL) com Darlan, atleta da seleção brasileira, em destaque">
 
-    botoes.forEach(function (botao) {
-        let curtiu = false;
-        botao.addEventListener("click", botaoClicado);
-        function botaoClicado() {
-            console.log("fui clicado");
-            let texto = botao.querySelector("span");
-            if (curtiu === false){
-               texto.textContent++;  
-             curtiu = true;
-            } else{
-              texto.textContent--;
-              curtiu = false;
-            }
-         }
-    })
+            <div>
+                <h2>Meu primeiro post</h2>
 
+                <p class="artigo-autor">Por: Emanuelle Vitória</p>
 
-</script>
+                <p>
+                    Bem-vindos ao meu site! Aqui vou falar sobre os jogos da Liga das Nações
+                    de Voleibol Masculino.
+                </p>
+
+                <button>🫶 <span>0</span></button>
+                <button>🗨️ <span>0</span></button>
+                <button>🔁 <span>0</span></button>
+                <button>🔗 <span>0</span></button>
+            </div>
+        </article>
+
+        <article>
+            <img src="imagem.blog.jpg"
+                alt="Mais do que jogadores: uma família em busca da vitória">
+
+            <div>
+                <h2>Meu segundo post</h2>
+
+                <p class="artigo-autor">Por: Emanuelle Vitória</p>
+
+                <p>
+                    Bem-vindos ao meu site! Aqui vou falar sobre os jogos da Liga das Nações
+                    de Voleibol Masculino.
+                </p>
+
+                <button>🫶 <span>0</span></button>
+                <button>🗨️ <span>0</span></button>
+                <button>🔁 <span>0</span></button>
+                <button>🔗 <span>0</span></button>
+            </div>
+        </article>
+
+    </main>
+
+    <script>
+        const botoes = document.querySelectorAll("button");
+
+        botoes.forEach(function (botao) {
+
+            let clicado = false;
+
+            botao.addEventListener("click", function () {
+
+                const contador = botao.querySelector("span");
+
+                if (!clicado) {
+                    contador.textContent = Number(contador.textContent) + 1;
+                    clicado = true;
+                } else {
+                    contador.textContent = Number(contador.textContent) - 1;
+                    clicado = false;
+                }
+
+            });
+
+        });
+    </script>
+
+</body>
 
 </html>
