@@ -22,20 +22,16 @@
                 <p class="artigo-autor">Por: Emanuelle Vitória</
               <p>Bem-vindos ao meu site! Aqui vou falar sobre os jogos da Liga das Nações
               de Voleibol Masculino<p>
-                
-
                 <button>🫶 <span>0</span></button>
                 <button>🗨️ <span>0</span></button>
                 <button>🔁 <span>0</span></button>
                 <button>🔗 <span>0</span></button>
             </div>
         </article>
-
-        <article>
+         <article>
             <img src="imagem.blog.jpg"
                 alt="Mais do que jogadores: uma família em busca da vitória">
-
-            <div>
+             <div>
                 <h2>Meu segundo post</h2>
                 <p>class="artigo-autor" <p>
                 </p>Por: Emanuelle Vitória</p>
@@ -48,31 +44,9 @@
             </div>
         </article>
      </main>
-   <body>
-    <script>
-        const botoes = document.querySelectorAll("button");
-
-        botoes.forEach(function (botao) {
-
-            let clicado = false;
-
-            botao.addEventListener("click", function () {
-
-                const contador = botao.querySelector("span");
-
-                if (!clicado) {
-                    contador.textContent = Number(contador.textContent) + 1;
-                    clicado = true;
-                } else {
-                    contador.textContent = Number(contador.textContent) - 1;
-                    clicado = false;
-                }
-
-            });
-
-        });
-    </script>
-
-</body>
+   
+    <script src="script.js"></script>
+     <body>
+    
 
 </html>
