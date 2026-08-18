@@ -5,6 +5,8 @@
     --cor-texto: #151428;
     --cor-contraste: #f3eef7;
     --cor-botão: #f9f9f9;
+
+    --fonte-texto: 'Georgia' sans-serif; 
 }
 
 .tema-escuro{
@@ -15,9 +17,22 @@
     --cor-contraste: #cec4d6;
     --cor-botão: #dfc2c2;
 }
+
+.tema-escuro a {
+    color: var(--cor-secundária);
+}
+
+.tema-escuro p {
+    color: var(--cor-texto)
+}
+
+.tema-escuro header {
+    color: var(--cor-contraste)
+}
+
 body {
     max-width: 80vw;
-    margin: 0 auto;
+    font-family:var(--fonte-texto)
 }
 
 header {
