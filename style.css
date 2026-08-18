@@ -1,49 +1,63 @@
-body{
+:root{
+ ---cor-primaria: #FFFF00;
+    --cor-secundária; #8D3970;
+    --cor-fundo: #ffffff;
+    --cor-texto: #151428;
+    --cor-contraste: #f3eef7;
+    --cor-botão: #f9f9f9;
+}
+
+.tema-escuro{
+    -cor-primaria: #e4e4cd;
+    --cor-secundária: #fb5fc4;
+    --cor-fundo: #f9d7d7 ;
+    --cor-texto: #b0aeec;
+    --cor-contraste: #cec4d6;
+    --cor-botão: #dfc2c2;
+}
+body {
     max-width: 80vw;
+    margin: 0 auto;
 }
 
 header {
-            background-color: #8D3970;
-            color: #FFFFFF;
-            text-align: center;
-            margin: 14px auto;
-            padding: 14px;
-            
-        }
-    main {
-            background-color: #FFFFFF;
-            color: #8D3970;
-            margin: 14px auto;
-            padding: 14px;
-          
-        display: flex;
-        flex-wrap: wrap;
-    }
+    background-color: var(--cor-secundária)
+    color: var(--cor-contraste)
+    text-align: center;
+    margin: 14px auto;
+    padding: 14px;
+}
 
-        article {
-            display: flex;
-            
-            border: 2px solid #8D3970
-       
-           margin: 14px;
-           gap:14px;
-           padding:14px;
+main {
+    background-color: var(--cor-fundo)
+    color: var(var(---cor-primaria))
+    margin: 14px auto;
+    padding: 14px;
+    display: flex;
+    flex-wrap: wrap;
+}
 
-           flex: 1 1 30%;
+article {
+    display: flex;
+    flex: 1 1 30%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 2px solid #8D3970; 
+    margin: 14px;
+    gap: 14px;
+    padding: 14px;
+    box-sizing: border-box; 
+}
 
-           flex-direction: column;
-           align-items: center;
-           text-align: center;
-           justify-content: center;
-        }
-
- img {
-            width: 90px;
-            height: 90px;
-            object-fit: cover;
-            border-radius: 6px;
-        }
+img {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 6px;
+}
 
 .artigo-autor {
-            font-weight: bold;
-        }
+    font-weight: bold;
+}
