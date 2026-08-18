@@ -76,3 +76,13 @@ img {
 .artigo-autor {
     font-weight: bold;
 }
+
+.btn-tema-escuro{
+    position: fixed
+    bottom: 14px;
+    rigth: 14px;
+    font-size: 34px;
+    padding: 10px;
+    background-color: var(--cor-primaria);
+    border-radius: 50%;
+}

@@ -15,3 +15,16 @@ botoes.forEach(function (botao) {
              }
         }
 })
+
+const btnTemaEscuro = document.querySelector("btn-tema-escuro");
+
+btnTemaEscuro.addEventListener("click", mudarTema);
+
+function mudarTema () {
+    const corpoPagina = document.body;
+    if (corpoPagina.ClassList.contains("tema-escuro")) {
+        corpoPagina.classList.remove("tema-escuro");
+    } else {
+        corpoPagina.classList.add("tema-escuro");
+    }
+}
